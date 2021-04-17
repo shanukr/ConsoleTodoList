@@ -41,7 +41,6 @@ let editTodo = (id, newTitle) => {
 
 let completeTodo = (id) => {
     todoList[id - 1] != undefined ? todoList[id - 1].completed = true : console.log(`No todo with id ${id}`)
-    return `Todo ${id} completed`;
 };
 
 let completeAll = () => {
@@ -51,7 +50,6 @@ let completeAll = () => {
 
 let deleteTodo = (id) => {
     todoList[id - 1] != undefined ? todoList.splice(id - 1, 1) : console.log(`No Todo with id: ${this.id}`)
-    return `Todo ${id} deleted`;
 };
 
 let clearCompleted = () => {
