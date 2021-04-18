@@ -10,19 +10,17 @@ class Todo {
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
-}
-
-Todo.prototype.showTodo = function () {
-    console.log(`-----------------------`)
-    console.log(`TODO ${this.id}: ${this.title}`)
-    this.completed === true ? console.log("Completed") : console.log(`Incomplete`);
-    console.log(`created on ${this.createdAt}`)
-    if (this.updatedAt != null) {
-        console.log(`updated on ${this.updatedAt}`)
+    showTodo() {
+        console.log(`-----------------------`)
+        console.log(`TODO ${this.id}: ${this.title}`)
+        this.completed === true ? console.log("Completed") : console.log(`Incomplete`);
+        console.log(`Created on ${this.createdAt}`)
+        if (this.updatedAt != null) {
+            console.log(`updated on ${this.updatedAt}`)
+        }
+        console.log(`-----------------------`)
     }
-    console.log(`-----------------------`)
 }
-
 
 let date = () => {
     let date = new Date();
@@ -49,7 +47,7 @@ let completeAll = () => {
 };
 
 let deleteTodo = (id) => {
-    todoList[id - 1] != undefined ? todoList.splice(id - 1, 1) : console.log(`No Todo with id: ${this.id}`)
+    todoList[id - 1] != undefined ? delete todoList[id - 1] : console.log(`No Todo with id: ${this.id}`)
 };
 
 let clearCompleted = () => {
